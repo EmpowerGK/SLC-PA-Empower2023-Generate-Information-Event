@@ -76,6 +76,13 @@ namespace Empower.Pa.Pls.GenerateInformationEvent
 				var notification = string.Empty;
 
 				// TODO: Implement logic here
+				string info1 = helper.GetParameterValue<string>("Info1");
+				string info2 = helper.GetParameterValue<string>("Info2");
+				string info3 = helper.GetParameterValue<string>("Info3");
+				string info4 = helper.GetParameterValue<string>("Info4");
+				string info5 = helper.GetParameterValue<string>("Info5");
+
+				notification = string.Concat(info1,info2,info3,info4,info5);
 
 				helper.Log($"The following information event will be generated': {notification}", PaLogLevel.Debug);
 				engine.GenerateInformation(notification);
